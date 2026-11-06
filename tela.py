@@ -8,10 +8,12 @@ janela.geometry("1920x1080")
 janela.configure(bg="#ffffff")
 titulo = janela.title("A + mais")
 
-caixa = ttk.Frame(janela, padding=160,  width=1920, height=1080, )
-caixa.grid()
-""" ttk.Label(caixa, text="Hello World!").grid(column=0, row=0) """
+caixa = tk.Frame(janela, bg="#ffffff", padx=160, pady=160)
+caixa.place(relx=0.5, rely=0.5, anchor="center")
+
+
 image = tk.PhotoImage(file="assets/imagens/logo.png")
-ttk.Label(caixa, image=image).grid()
-ttk.Button(caixa, text="Quit", command=janela.destroy).grid(column=1, row=0)
+tk.Label(caixa, image=image).grid(column=0, row=0)
+tk.Entry(caixa, width=30).grid(column=0, row=1, pady=10)
+
 janela.mainloop()
